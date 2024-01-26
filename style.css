@@ -319,6 +319,7 @@ section {
 
 #experience {
   position: relative;
+  
 }
 
 .experience-sub-title {
@@ -326,12 +327,16 @@ section {
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .experience-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  
 }
 
 .article-container {
