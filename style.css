@@ -389,6 +389,8 @@ article .icon {
 
 #projects {
   position: relative;
+
+  
 }
 
 .color-container {
@@ -400,16 +402,28 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  margin: 1rem auto;
+  object-fit: cover; 
+
 }
 
 .project-title {
   margin: 1rem;
   color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+
 }
 
 .project-btn {
+  display: flex;
+  justify-content: center;
   color: black;
   border-color: rgb(163, 163, 163);
+  background: #cdf4ff;
+  
+
 }
 
 /* CONTACT */
