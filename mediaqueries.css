@@ -26,6 +26,8 @@
     #profile,
     .section-container {
       display: block;
+      flex-direction: column; /* Stack the items vertically on small screens */
+
     }
     .arrow {
       display: none;
@@ -46,16 +48,59 @@
       margin-top: 0;
     }
   }
-  
-  @media screen and (max-width: 600px) {
+
+  @media screen and (max-width: 768px) {
     #contact,
     footer {
-      height: 40vh;
+      height: auto; /* Adjust height to auto for a flexible layout */
     }
+
     #profile {
-      height: 83vh;
+      height: auto; /* Adjust height to auto */
       margin-bottom: 0;
+      display: flex; /* Keep using flexbox */
+      flex-direction: column; /* Stack the items vertically */
+      align-items: center; /* Center-align items */
+      text-align: center; /* Center-align the text for a better mobile look */
+      padding: 20px; /* Add some padding */
     }
+
+    .section__pic-container,
+    .section__text {
+      width: 100%; /* Set the width of child elements to full width */
+      max-width: none; /* Override any max-width set on larger screens */
+    }
+
+    .section__pic-container {
+      margin-bottom: 20px; /* Add space below the image */
+    }
+
+    /* Adjust the size of the image if necessary */
+    .section__pic-container img {
+      max-width: 50%; /* Adjust the size of the image to fit the screen */
+      height: auto; /* Keep the image aspect ratio */
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+    /* Adjust button and icon sizes if necessary */
+    .btn, .icon {
+      font-size: 14px; /* Adjust the font size for better legibility on small screens */
+      padding: 10px 20px; /* Adjust the padding to fit the smaller buttons */
+      margin: 0 5px; /* Add margin between buttons */
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center; /* Center buttons */
+      flex-wrap: wrap; /* Wrap buttons to the next line if space is insufficient */
+    }
+
+    .socials-container {
+      display: flex;
+      justify-content: center; /* Center social icons */
+      margin-top: 20px; /* Add space above the social icons */
+    }
+
     article {
       font-size: 1rem;
     }
