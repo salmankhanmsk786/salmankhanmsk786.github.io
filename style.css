@@ -320,11 +320,14 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  
 }
-
+.experience-details-container,
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap; /* This will allow items to move to the next line if they don't fit */
+
 }
 
 .about-containers,
@@ -344,12 +347,14 @@ section {
 
 .details-container {
   padding: 1.5rem;
-  flex: 1;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  max-width: calc(33.333% - 1rem); /* Adjust the percentage as needed, subtract the gap */
+  flex: 0 0 auto; /* Do not grow, do not shrink, initial base size is auto */
+  margin-bottom: 1rem; /* Optional: adds a margin at the bottom of each project */
 }
 
 .section-container {
@@ -411,7 +416,12 @@ article .icon {
 
 #projects {
   position: relative;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+
 }
 
 .color-container {
@@ -443,8 +453,6 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
   background: #cdf4ff;
-  
-
 }
 
 /* CONTACT */

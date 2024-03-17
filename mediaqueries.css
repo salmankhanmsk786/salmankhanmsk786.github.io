@@ -10,11 +10,17 @@
     #projects {
       height: fit-content;
     }
+    .details-container {
+      max-width: calc(50% - 1rem); /* Each project will take half of the container width */
+    }
   }
   
   @media screen and (max-width: 1200px) {
     #desktop-nav {
       display: none;
+    }
+    .details-container {
+      max-width: calc(50% - 1rem); /* Each project will take half of the container width */
     }
     #hamburger-nav {
       display: flex;
@@ -53,6 +59,9 @@
     #contact,
     footer {
       height: auto; /* Adjust height to auto for a flexible layout */
+    }
+    .details-container {
+      max-width: 100%; /* Each project will take full width */
     }
 
     #profile {
