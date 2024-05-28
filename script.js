@@ -8,19 +8,19 @@ function toggleMenu() {
     const icon = document.querySelector(".hamburger-icon");
     menu.classList.toggle("open");
     icon.classList.toggle("open");
-  }
+}
 
-  script.onload = function() {
+script.onload = function() {
     // Initialize Typed.js here
     const typed = new Typed('.section__text__p2', {
-      strings: ["Full-Stack Developer", "Web Developer", "App Developer "],
+      strings: ["Full-Stack Developer", "Web Developer", "App Developer"],
       typeSpeed: 60,
       backSpeed: 50,
-      backdelay : 2000,
+      backDelay: 2000,
       loop: true
-
     });
-  };
+};
+
   document.head.appendChild(script);
   
 

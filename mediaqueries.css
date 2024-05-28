@@ -13,9 +13,12 @@
     .details-container {
       max-width: calc(50% - 1rem); /* Each project will take half of the container width */
     }
+
+    
   }
   
   @media screen and (max-width: 1200px) {
+    
     #desktop-nav {
       display: none;
     }
