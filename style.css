@@ -19,6 +19,8 @@ body {
   background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+  scroll-behavior: smooth;
+
 }
 
 @keyframes gradient {
@@ -251,6 +253,13 @@ section {
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
 
 /* ABOUT SECTION */
 #about {
