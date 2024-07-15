@@ -168,6 +168,20 @@ section {
   height: 80vh;
 }
 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+#profile {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
 .section__pic-container {
   display: flex;
   height: 400px;
@@ -204,6 +218,15 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
+
+#socials-container .icon {
+  transition: transform 0.3s ease;
+}
+
+#socials-container .icon:hover {
+  transform: scale(1.2);
+}
+
 
 /* ICONS */
 .icon {
