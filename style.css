@@ -426,6 +426,29 @@ article .icon {
   height: 2.5rem;
 }
 
+
+/* zoom in effect */
+.details-container.color-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container.color-container:hover {
+  transform: scale(1.10);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* glow effect */
+.details-container.color-container {
+  transition: box-shadow 0.3s ease;
+}
+
+.details-container.color-container:hover {
+  box-shadow: 0 0 20px rgba(176, 237, 255, 0.97), 0 0 40px #55f9f980;
+}
+
+
+
+
 /* FOOTER SECTION */
 footer {
   height: 26vh;
