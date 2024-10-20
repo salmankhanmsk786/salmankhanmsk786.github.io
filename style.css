@@ -300,6 +300,7 @@ section {
   margin-bottom: 2rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+
 }
 
 .about-details-container {
@@ -310,6 +311,8 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
+  justify-content: space-around;  
+
 }
 
 .about-pic {
