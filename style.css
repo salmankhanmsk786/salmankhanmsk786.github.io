@@ -218,8 +218,17 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(29, 118, 196);
+  display: inline;
+  
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+
 }
 
 .title {
