@@ -407,7 +407,6 @@ article .icon {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
-  
 
 }
 
@@ -426,15 +425,16 @@ article .icon {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 
-
 }
 
 .project-img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  
-
+  object-fit: cover;
+  transition: all 0.3s ease;
+  max-height: 350px;
+  max-width: fit-content;
 }
 
 
@@ -444,6 +444,37 @@ article .icon {
   gap: 1rem;
   margin-top: 1rem;
 }
+
+
+.details-container:hover {
+  transform: scale(1.05); /* Optional zoom effect */
+}
+
+/* Hover image for Project 1 */
+.project1:hover .project-img {
+  content: url('./assets/P1-HomePage.webp'); /* Replace with Project 1's hover image */
+}
+
+.project2:hover .project-img {
+  content: url('./assets/P2-HomePage.webp'); /* Replace with Project 2's hover image */
+}
+
+.project3:hover .project-img {
+  content: url('./assets/P3-HomePage.webp'); /* Replace with Project 2's hover image */
+}
+
+.project5:hover .project-img {
+  content: url('./assets/P5-HomePage.webp'); /* Replace with Project 2's hover image */
+}
+
+.project7:hover .project-img {
+  content: url('./assets/P7-HomePage.webp'); /* Replace with Project 2's hover image */
+}
+
+.project8:hover .project-img {
+  content: url('./assets/P8-HomePage.webp'); /* Replace with Project 2's hover image */
+}
+
 
 /* CONTACT SECTION */
 #contact {
@@ -483,7 +514,6 @@ article .icon {
 .email-icon {
   height: 2.5rem;
 }
-
 
 /* zoom in effect */
 .details-container.color-container {
