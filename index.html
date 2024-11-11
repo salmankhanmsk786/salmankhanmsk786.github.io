@@ -15,6 +15,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link href="./node_modules/lightbox2/src/css/lightbox.css" rel="stylesheet" />
+
     
   </head>
   <body>
@@ -397,12 +399,14 @@
           <!-- add another project 1 -->
           <div class="details-container color-container project1">
             <div class="article-container">
-              <img
-                src="./assets/project-1.webp"
-                alt="Project 1"
-                class="project-img"
-                loading="lazy"
-              />
+              <a href="./assets/P1-HomePage.webp" data-lightbox="projects" data-title="Project 1">
+                <img
+                  src="./assets/project-1.webp"
+                  alt="Project 1"
+                  class="project-img"
+                  loading="lazy"
+                />
+              </a>
             </div>
             <h2 class="experience-sub-title project-title">ParkNeighbor</h2>
             <p class="project-description">
@@ -693,6 +697,8 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"  ></script>
 
     <script src="script.js"></script>
+    <script src="./node_modules/lightbox2/src/js/lightbox.js"></script>
+
     
   </body>
 </html>

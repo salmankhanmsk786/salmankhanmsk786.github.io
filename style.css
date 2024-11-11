@@ -425,6 +425,7 @@ article .icon {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 
+
 }
 
 .project-img {
@@ -434,7 +435,8 @@ article .icon {
   object-fit: cover;
   transition: all 0.3s ease;
   max-height: 350px;
-  max-width: fit-content;
+  max-width: fit-content;  
+
 }
 
 
@@ -443,16 +445,15 @@ article .icon {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+
 }
 
 
-.details-container:hover {
-  transform: scale(1.05); /* Optional zoom effect */
-}
 
 /* Hover image for Project 1 */
 .project1:hover .project-img {
   content: url('./assets/P1-HomePage.webp'); /* Replace with Project 1's hover image */
+
 }
 
 .project2:hover .project-img {
@@ -471,9 +472,12 @@ article .icon {
   content: url('./assets/P7-HomePage.webp'); /* Replace with Project 2's hover image */
 }
 
+
 .project8:hover .project-img {
   content: url('./assets/P8-HomePage.webp'); /* Replace with Project 2's hover image */
 }
+
+
 
 
 /* CONTACT SECTION */
@@ -515,26 +519,20 @@ article .icon {
   height: 2.5rem;
 }
 
-/* zoom in effect */
-.details-container.color-container {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .details-container.color-container:hover {
-  transform: scale(1.10);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: rgb(53, 53, 53) 0.2rem solid;
+  border-color: rgb(5, 217, 255);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  /* smooth zoom in  */
+  transform: scale(1.05);
 }
-
 /* glow effect */
-.details-container.color-container {
-  transition: box-shadow 0.3s ease;
-}
-
 .details-container.color-container:hover {
   box-shadow: 0 0 20px rgba(176, 237, 255, 0.97), 0 0 40px #55f9f980;
+  
 }
-
-
 
 
 /* FOOTER SECTION */
