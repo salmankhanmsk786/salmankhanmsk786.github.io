@@ -400,6 +400,7 @@ article .icon {
 #projects {
   padding: 20px;
   
+  
 }
 
 #projects .experience-details-container {
@@ -407,6 +408,7 @@ article .icon {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
+  
 
 }
 
@@ -436,6 +438,7 @@ article .icon {
   transition: all 0.3s ease;
   max-height: 350px;
   max-width: fit-content;  
+
 
 }
 
@@ -532,8 +535,8 @@ article .icon {
 .details-container.color-container:hover {
   box-shadow: 0 0 20px rgba(176, 237, 255, 0.97), 0 0 40px #55f9f980;
   
+  
 }
-
 
 /* FOOTER SECTION */
 footer {
