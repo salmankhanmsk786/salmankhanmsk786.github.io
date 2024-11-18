@@ -3,6 +3,32 @@ const script = document.createElement("script");
 script.src = "https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js";
 document.head.appendChild(script);
 
+function generateStars(rating) {
+    const fullStar = '<i class="fas fa-star"></i>';
+    const halfStar = '<i class="fas fa-star-half-alt"></i>';
+    const emptyStar = '<i class="far fa-star"></i>';
+    
+    let stars = '';
+    for (let i = 1; i <= 5; i++) {
+      if (rating >= i) {
+        stars += fullStar;
+      } else if (rating >= i - 0.5) {
+        stars += halfStar;
+      } else {
+        stars += emptyStar;
+      }
+    }
+    return stars;
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const starElements = document.querySelectorAll('.stars');
+    starElements.forEach(function(starElement) {
+      const rating = parseFloat(starElement.getAttribute('data-rating'));
+      starElement.innerHTML = generateStars(rating);
+    });
+  });
+
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
