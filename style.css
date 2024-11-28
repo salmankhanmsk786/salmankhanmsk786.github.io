@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Ensuring padding and border are included in the element's total width and height */
-  
 }
 
 body {
@@ -17,23 +16,21 @@ body {
     rgb(179, 231, 255) 100%
   );
   background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   scroll-behavior: smooth;
-
 }
 
-
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 html {
@@ -169,22 +166,20 @@ section {
   height: 80vh;
   position: relative;
   z-index: 1;
-
 }
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 #profile {
   animation: fadeIn 1s ease-in-out;
 }
-
 
 .section__pic-container {
   display: flex;
@@ -193,16 +188,19 @@ section {
   margin: auto 0;
   border-radius: 30%;
   overflow: hidden;
-  
+
   animation: float 3s ease-in-out infinite;
-  
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-
 
 .section__text {
   align-self: center;
@@ -222,13 +220,11 @@ section {
   font-size: 1.7rem;
   color: rgb(29, 118, 196);
   display: inline;
-  
 }
 
 .typed-cursor {
   opacity: 1;
   animation: blink 0.7s infinite;
-
 }
 
 .title {
@@ -250,7 +246,6 @@ section {
 #socials-container .icon:hover {
   transform: scale(1.2);
 }
-
 
 /* ICONS */
 .icon {
@@ -304,9 +299,7 @@ section {
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  
 }
-
 
 /* ABOUT SECTION */
 #about {
@@ -318,7 +311,6 @@ section {
   margin-bottom: 2rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-
 }
 
 .about-details-container {
@@ -329,8 +321,7 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
-  justify-content: space-around;  
-
+  justify-content: space-around;
 }
 
 .about-pic {
@@ -399,8 +390,6 @@ article .icon {
 /* PROJECTS SECTION */
 #projects {
   padding: 20px;
-  
-  
 }
 
 #projects .experience-details-container {
@@ -408,10 +397,7 @@ article .icon {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
-  
-
 }
-
 
 .details-container.color-container {
   text-align: center;
@@ -427,16 +413,14 @@ article .icon {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-
-
 }
 
 .skillset-card {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
-  height: 50%;
+  width: 100%;
+  height: 80%; /* Increased height */
   background-color: rgba(255, 255, 255, 0.932);
   color: black;
   display: flex;
@@ -446,8 +430,15 @@ article .icon {
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-  left: 95%; /* Position it to the right of the container */
   border-radius: 30px;
+}
+
+.skillset-card.right {
+  left: 100%; /* Position it to the right of the container */
+}
+
+.skillset-card.left {
+  right: 100%; /* Position it to the left of the container */
 }
 
 .skillset-card h3 {
@@ -458,14 +449,12 @@ article .icon {
 
 .skillset-card ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
   font-size: 1rem;
-
+  font-weight: 600;
+  padding: 0% 5%;
 }
 
 .skillset-card ul li {
@@ -479,9 +468,38 @@ article .icon {
   color: rgb(0, 60, 255); /* Color for the stars */
 }
 
+.skillset-card ul li span {
+  color: rgb(0, 60, 255); /* Color for the stars */
+}
+
+.skillset-card p {
+  color: black;
+  font-weight: 600;
+  padding: 0% 5%;
+}
+
+.skillset-card img {
+  object-fit: cover;
+  max-height: 30px;
+  max-width: 30px;
+  margin: 0.5rem;
+}
+
 .details-container:hover .skillset-card {
   opacity: 1;
   pointer-events: auto;
+}
+
+.details-container:hover .skillset-card.right {
+  left: calc(
+    100% + 10px
+  ); /* Adjust the position to the right with some margin */
+}
+
+.details-container:hover .skillset-card.left {
+  right: calc(
+    100% + 10px
+  ); /* Adjust the position to the left with some margin */
 }
 
 .project-img {
@@ -491,51 +509,40 @@ article .icon {
   object-fit: cover;
   transition: all 0.3s ease;
   max-height: 350px;
-  max-width: fit-content;  
-
-
+  max-width: fit-content;
 }
-
 
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
-
 }
-
-
 
 /* Hover image for Project 1 */
 .project1:hover .project-img {
-  content: url('./assets/P1-HomePage.webp'); /* Replace with Project 1's hover image */
-
+  content: url("./assets/P1-HomePage.webp"); /* Replace with Project 1's hover image */
 }
 
 .project2:hover .project-img {
-  content: url('./assets/P2-HomePage.webp'); /* Replace with Project 2's hover image */
+  content: url("./assets/P2-HomePage.webp"); /* Replace with Project 2's hover image */
 }
 
 .project3:hover .project-img {
-  content: url('./assets/P3-HomePage.webp'); /* Replace with Project 2's hover image */
+  content: url("./assets/P3-HomePage.webp"); /* Replace with Project 2's hover image */
 }
 
 .project5:hover .project-img {
-  content: url('./assets/P5-HomePage.webp'); /* Replace with Project 2's hover image */
+  content: url("./assets/P5-HomePage.webp"); /* Replace with Project 2's hover image */
 }
 
 .project7:hover .project-img {
-  content: url('./assets/P7-HomePage.webp'); /* Replace with Project 2's hover image */
+  content: url("./assets/P7-HomePage.webp"); /* Replace with Project 2's hover image */
 }
-
 
 .project8:hover .project-img {
-  content: url('./assets/P8-HomePage.webp'); /* Replace with Project 2's hover image */
+  content: url("./assets/P8-HomePage.webp"); /* Replace with Project 2's hover image */
 }
-
-
-
 
 /* CONTACT SECTION */
 #contact {
@@ -588,8 +595,6 @@ article .icon {
 /* glow effect */
 .details-container.color-container:hover {
   box-shadow: 0 0 20px rgba(176, 237, 255, 0.97), 0 0 40px #55f9f980;
-  
-  
 }
 
 /* FOOTER SECTION */
@@ -621,29 +626,31 @@ footer p {
   }
 }
 
-
 #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 170vh;
-    z-index: -1; /* Ensure particles are behind the content */
-    top: 0;
-    left: 0;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-
+  position: absolute;
+  width: 100%;
+  height: 170vh;
+  z-index: -1; /* Ensure particles are behind the content */
+  top: 0;
+  left: 0;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 #particles-js canvas {
   filter: drop-shadow(0 0 6px rgba(151, 239, 255, 0.8));
 
-@keyframes sparkle {
-  0%, 100% {
+  @keyframes sparkle {
+    0%,
+    100% {
       transform: scale(1);
-  }
-  50% {
+    }
+    50% {
       transform: scale(1.3); /* Slightly increases the size for sparkle */
+    }
   }
 }
-}
-
