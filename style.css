@@ -431,6 +431,9 @@ article .icon {
   transition: opacity 0.3s ease;
   pointer-events: none;
   border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
 .skillset-card.right {
