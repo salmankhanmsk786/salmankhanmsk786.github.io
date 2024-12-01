@@ -138,3 +138,24 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+
+// Dark Mode Toggle Switch
+// Select the toggle switch
+const darkModeSwitch = document.getElementById("darkModeSwitch");
+
+// Check for saved user preference in localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+  darkModeSwitch.checked = true; // Keep the switch checked
+}
+
+// Toggle dark mode on switch change
+darkModeSwitch.addEventListener("change", () => {
+  if (darkModeSwitch.checked) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", "disabled");
+  }
+});

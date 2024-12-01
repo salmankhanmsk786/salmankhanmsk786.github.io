@@ -22,15 +22,24 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Salman Khan</div>
+      <div class="logo">Salman Khan</div> 
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          
+          <div class="dark-mode-toggle">
+            <h6>Dark Mode</h6>
+            <label class="switch">
+              <input type="checkbox" id="darkModeSwitch" />
+              <span class="slider round"></span>
+            </label>
+          </div>
         </ul>
       </div>
+      
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Salman Khan</div>
@@ -45,6 +54,8 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          
+          
         </div>
       </div>
     </nav>
@@ -436,7 +447,7 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
+      <div class="Project-details-container">
         <div class="about-containers">
 
           <!-- add another project 1 -->
@@ -911,7 +922,7 @@
 
     <script src="script.js"></script>
     <script src="./node_modules/lightbox2/src/js/lightbox.js"></script>
-
+    
     
   </body>
 </html>
