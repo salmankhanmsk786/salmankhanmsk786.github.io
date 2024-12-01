@@ -108,6 +108,10 @@ body.dark-mode {
   filter: invert(1);
 }
 
+.dark-mode #socials-container .icon {
+  filter: invert(1);
+}
+
 /* End of dark mode styles */
 
 @keyframes gradient {
