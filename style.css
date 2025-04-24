@@ -638,6 +638,9 @@ article .icon {
 .project8:hover .project-img {
   content: url("./assets/P8-HomePage.webp"); /* Replace with Project 2's hover image */
 }
+.project9:hover .project-img {
+  content: url("./assets/P9-HomePage.webp"); /* Replace with Project 2's hover image */
+}
 
 /* CONTACT SECTION */
 #contact {
